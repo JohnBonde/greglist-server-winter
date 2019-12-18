@@ -12,7 +12,7 @@
             required
             type="text"
             v-model="newCar.make"
-            placeholder="Make"
+            placeholder="make"
           />
           <input
             required

@@ -8,7 +8,8 @@ const Job = new Schema(
     location: { type: String, required: true },
     description: { type: String, required: true, maxlength: 2000 },
     pay: { type: Number, required: true },
-    requirements: { type: String }
+    requirements: { type: String },
+    applied: { type: Boolean, default: false }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 

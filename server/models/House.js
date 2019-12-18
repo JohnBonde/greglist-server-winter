@@ -8,7 +8,8 @@ const House = new Schema(
     beds: { type: Number, required: true },
     baths: { type: Number, required: true },
     location: { type: String, required: true },
-    imgUrls: [{ type: String }]
+    imgUrl: { type: String },
+    bought: { type: Boolean, default: false }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 )

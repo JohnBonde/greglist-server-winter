@@ -6,6 +6,13 @@ import Home from "../views/Home.vue";
 import CarDetails from "../views/CarDetails.vue";
 // @ts-ignore
 import Jobs from "../views/Jobs.vue";
+// @ts-ignore
+import JobDetails from "../views/JobDetails.vue";
+// @ts-ignore
+import Houses from "../views/Houses.vue";
+// @ts-ignore
+import HouseDetails from "../views/HouseDetails.vue"
+
 
 Vue.use(VueRouter);
 
@@ -24,6 +31,21 @@ const routes = [
     path: "/jobs",
     name: "jobs",
     component: Jobs
+  },
+  {
+    path: "/jobs/:id",
+    name: "jobDetails",
+    component: JobDetails
+  },
+  {
+    path: "/houses",
+    name: "houses",
+    component: Houses
+  },
+  {
+    path: "/houses/:id",
+    name: "houseDetails",
+    component: HouseDetails
   },
   {
     path: "*", //saftey net that returns bad routes back to the home

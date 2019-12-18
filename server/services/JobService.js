@@ -32,7 +32,7 @@ class JobService {
   }
 
   async delete(id) {
-    let data = await _repository.findOneAndDelete({ _id: id });
+    let data = await _repository.findOneAndUpdate({ _id: id }, { applied: true });
     if (!data) {
       throw new ApiError("Invalid ID", 400);
     }
