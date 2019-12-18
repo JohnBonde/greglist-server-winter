@@ -4,7 +4,7 @@
       <img :src="houseData.imgUrl" alt />
       <p>${{houseData.price}} | {{houseData.location}}</p>
     </router-link>
-    <button @click="bought">SOLD</button>
+    <button v-if="!houseData.bought" @click="bought">BUY</button>
   </div>
 </template>
 

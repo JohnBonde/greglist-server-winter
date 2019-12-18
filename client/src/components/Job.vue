@@ -3,7 +3,7 @@
     <router-link :to="{name: 'jobDetails', params: {id: jobData.id}}">
       <p>{{jobMakeUpperCase}} | {{jobData.company}}</p>
     </router-link>
-    <button @click="applied">APPLY</button>
+    <button v-if="!jobData.applied" @click="applied">APPLY</button>
   </div>
 </template>
 

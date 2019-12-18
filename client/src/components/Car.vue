@@ -1,10 +1,10 @@
 <template>
   <div class="car" :class="{ greyscale: carData.sold }">
     <router-link :to="{ name: 'carDetails', params: { id: carData.id } }">
-      <img :src="carData.imgUrl" alt="" />
+      <img :src="carData.imgUrl" alt />
       <p>{{ carMakeUpperCase }} | {{ carData.model }}</p>
     </router-link>
-    <button @click="sold">SOLD</button>
+    <button v-if="!carData.sold" @click="sold">BUY</button>
   </div>
 </template>
 
